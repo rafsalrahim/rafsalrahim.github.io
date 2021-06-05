@@ -1,6 +1,7 @@
 .about{
     overflow: hidden;
     padding: 3% 7%;
+    max-width: 65em;
 }
 h1 
 { font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; 
@@ -8,7 +9,9 @@ h1
     font-style: normal; 
     font-variant: normal;
     font-weight: 700; 
-    line-height: 26.4px; } 
+    line-height: 26.4px; 
+    
+} 
 h3 
 { font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; 
     font-size: 16px; 
