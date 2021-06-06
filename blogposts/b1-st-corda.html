@@ -2,7 +2,9 @@
     <head>
 		<link rel="stylesheet" href="../css/basic.css">
 		<link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/blog.css">  
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet"
+    href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/base16/dracula.min.css">
   </head>
     <body>
         <div class="topnav">
@@ -10,11 +12,27 @@
   			<!-- <a href="#news">Blogs</a>
   			<a href="#contact">Contact</a> -->
  			<a class="active"  href="../about.html">About</a>
-		</div> 
-        <div class="blog-body">
-            <h1>Aasfasfasfas</h1>
-          <P>sfsdfsdfsdfdsfsd dfadfadfad sdfadfadf dsfafadf. sfafasfad .safasfasa</P>
-        </div>
-    </body>
+		</div>
+        <div class="container blog-body">
+            <h1>Running a sample cordapp example.</h1>
+            <P>To get started with corda, the team have given a number of cordapp examples in <a href="https://github.com/corda/samples-java/tree/master/Basic">here.</a>
+                In this blog we are running the most common cordapps among them cordapp-example.
+                So lets get started.
+            </P>
+
+            <p>Download the cordapp-example folder from the github repo. using terminal get into the folder.
+            </p>
+            <div class="code-wrapper" ><pre>
+              <code class="language-bash" >
+                cd samples-java/Basic/cordapp-example
+            </code>
+          </pre></div>
+              </div>
+
+              <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+              <script>
+                hljs.initHighlightingOnLoad();
+              </script>
+            </body>
 
 </html>
