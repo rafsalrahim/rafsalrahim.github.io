@@ -1,0 +1,112 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="../css/basic.css">
+		<link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet"
+    href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/base16/dracula.min.css">
+  </head>
+    <body>
+        <div class="topnav">
+  			<a  class="active"  href="../index.html">Home</a>
+  			<!-- <a href="#news">Blogs</a>
+  			<a href="#contact">Contact</a> -->
+ 			<a  href="../about.html">About</a>
+		</div>
+        <div class="container blog-body">
+            <h1>Running a sample cordapp example.</h1>
+            <P>To get started with corda, the team have given a number of cordapp examples in <a href="https://github.com/corda/samples-java/tree/master/Basic">here.</a>
+                In this blog we are running the most common cordapps among them cordapp-example.
+                So lets get started.
+            </P>
+            <h3>Prerequisite</h3>
+            <p> - Install the Java 8 JDK. <strong>Corda requires at least version 8u171</strong>, but do not currently support Java 9 or higher for this version of Corda.</p>
+            <p> - Install the IntelliJ IDEA Community Edition. Corda supports <strong>IntelliJ IDEA versions 2017.x, 2018.x, 2019.x, and 2020.x </strong>; and Kotlin plugin version 1.2.71.</p>
+            <p> - Install Git in local machine.</p>
+            <p> - If you’d prefer to install Gradle manually, install Gradle version 5.6.4. Corda requires a <strong>Gradle version between 5.1 and 5.6.4</strong>, and does not support Gradle 6.x.</p>
+            <p>Download the cordapp-example folder from the github repo. using terminal get into the folder.
+            </p>
+            <div class="code-wrapper" ><pre>
+              <code class="language-bash" >
+                cd samples-java/Basic/cordapp-example
+            </code>
+          </pre></div>
+          <h3>Running cordapp-example</h3>
+           <p>
+              start IntelliJ IDEA and open the cordapp-example folder. Let it download all the files and depentancies needed foe building the cordapp.
+              If you see a message saying the build completed successfully, go to terminal and run
+          </p>
+          <div class="code-wrapper" ><pre>
+            <code class="language-bash" >
+              Unix/Mac OSX : ./gradlew deployNodes <br>
+              Windows      :  gradlew.bat deployNodes
+          </code>
+        </pre></div>
+        <p>
+          Check wether all the nodes deployed successfully. For referance a folder structure of node folder is given below.
+        </p>
+        <image src="/image/corda-node-str.png"></image>
+        <p>if its successfull and the all nodes deployed successfully we can now run that nodes. To run the node we have two methods, <br> we can do it simply by executing the runnodes as shown below</p>
+        <div class="code-wrapper" ><pre>
+          <code class="language-bash" >
+            Unix/Mac OSX : ./build/nodes/runnodes <br>
+            Windows      : .\build\nodes\runnodes.bat
+            <br>
+
+          </code></pre></div>
+          <p>          Start a Spring Boot server for each node by opening a terminal/command prompt for each node and entering the following command, replacing X with A, B and C:
+          </p>
+          <div class="code-wrapper" ><pre>
+            <code class="language-bash" >
+            Unix/Mac OSX : ./gradlew runPartyXServer <br>
+            Windows      :  gradlew.bat runPartyXServer
+
+          </code>
+      </pre></div>
+
+      <p> With out using runnodes we can run the nodes intividually, to do that open tyerminals for each nodes and follow the below given steps,
+      </p>
+      <div class="code-wrapper" ><pre>
+        <code class="language-bash" >
+          cd build/nodes/{nodename} <br>
+             java -jar corda.jar
+      </code>
+  </pre></div>
+  <p>Output will be like this</p>
+  <div class="code-wrapper" ><pre>
+    <code class="language-bash" >
+      ______               __
+      / ____/     _________/ /___ _
+     / /     __  / ___/ __  / __ `/         Top tip: never say "oops", instead
+    / /___  /_/ / /  / /_/ / /_/ /          always say "Ah, Interesting!"
+    \____/     /_/   \__,_/\__,_/
+
+    --- Corda Open Source corda-4.4 (4157c25) -----------------------------------------------
+
+
+    Logs can be found in                    : /Users/cordauser/Desktop/cordapp-example/workflows-java/build/nodes/PartyA/logs
+    Database connection url is              : jdbc:h2:tcp://localhost:59472/node
+    Incoming connection address             : localhost:10005
+    Listening on port                       : 10005
+    Loaded CorDapps                         : corda-finance-corda-4.4, cordapp-example-0.1, corda-core-corda-4.4
+    Node for "PartyA" started up and registered in 38.59 sec
+
+
+    Welcome to the Corda interactive shell.
+    Useful commands include 'help' to see what is available, and 'bye' to shut down the node.
+
+    Fri Mar 02 17:34:02 GMT 2018>>>
+
+  </code>
+</pre></div>
+<p>If all done well now we can intract with the cordapps using the server. Try yourself and enjoy.</p>
+
+              </div>
+
+              <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+              <script>
+                hljs.initHighlightingOnLoad();
+              </script>
+            </body>
+
+</html>
