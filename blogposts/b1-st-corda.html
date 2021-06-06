@@ -11,13 +11,14 @@
   			<a  class="active"  href="../index.html">Home</a>
   			<!-- <a href="#news">Blogs</a>
   			<a href="#contact">Contact</a> -->
+
  			<a  href="../about.html">About</a>
 		</div>
         <div class="container blog-body">
             <h1>Running a sample cordapp example.</h1>
             <P>To get started with corda, the team have given a number of cordapp examples in <a href="https://github.com/corda/samples-java/tree/master/Basic">here.</a>
-                In this blog we are running the most common cordapps among them cordapp-example.
-                So lets get started.
+              In this blog, we are running the most common cordapps among them cordapp-example.
+              So let's get started.
             </P>
             <h3>Prerequisite</h3>
             <p> - Install the Java 8 JDK. <strong>Corda requires at least version 8u171</strong>, but do not currently support Java 9 or higher for this version of Corda.</p>
@@ -33,9 +34,9 @@
           </pre></div>
           <h3>Running cordapp-example</h3>
            <p>
-              start IntelliJ IDEA and open the cordapp-example folder. Let it download all the files and depentancies needed foe building the cordapp.
-              If you see a message saying the build completed successfully, go to terminal and run
-          </p>
+            start IntelliJ IDEA and open the cordapp-example folder. Let it download all the files and dependencies needed for building the cordapp.
+            If you see a message saying the build completed successfully, go to the terminal and run
+        </p>
           <div class="code-wrapper" ><pre>
             <code class="language-bash" >
               Unix/Mac OSX : ./gradlew deployNodes <br>
@@ -43,10 +44,10 @@
           </code>
         </pre></div>
         <p>
-          Check wether all the nodes deployed successfully. For referance a folder structure of node folder is given below.
+          Check whether all the nodes deployed successfully. For reference, a folder structure of the node folder is given below.
         </p>
         <image src="/image/corda-node-str.png"></image>
-        <p>if its successfull and the all nodes deployed successfully we can now run that nodes. To run the node we have two methods, <br> we can do it simply by executing the runnodes as shown below</p>
+        <p>if it's successful and all nodes deployed successfully we can now run those nodes. To run the node we have two methods, <br> we can do it simply by executing the runnodes as shown below</p>
         <div class="code-wrapper" ><pre>
           <code class="language-bash" >
             Unix/Mac OSX : ./build/nodes/runnodes <br>
@@ -54,7 +55,7 @@
             <br>
 
           </code></pre></div>
-          <p>          Start a Spring Boot server for each node by opening a terminal/command prompt for each node and entering the following command, replacing X with A, B and C:
+          <p> Start a Spring Boot server for each node by opening a terminal/command prompt for each node and entering the following command, replacing X with A, B and C:
           </p>
           <div class="code-wrapper" ><pre>
             <code class="language-bash" >
@@ -64,7 +65,7 @@
           </code>
       </pre></div>
 
-      <p> With out using runnodes we can run the nodes intividually, to do that open tyerminals for each nodes and follow the below given steps,
+      <p> Without using runnodes we can run the nodes individually, to do that open terminals for each node and follow the below-given steps,
       </p>
       <div class="code-wrapper" ><pre>
         <code class="language-bash" >
@@ -99,7 +100,7 @@
 
   </code>
 </pre></div>
-<p>If all done well now we can intract with the cordapps using the server. Try yourself and enjoy.</p>
+<p>If all done well now we can interact with the cordapps using the server. Try yourself and enjoy.</p>
 
               </div>
 
